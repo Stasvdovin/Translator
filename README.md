@@ -1,4 +1,4 @@
-![Tests](https://github.com/stasvdovin/Translator/actions/workflows/python-app.yml/badge.svg)
+[![Tests](https://github.com/Stasvdovin/Translator/actions/workflows/python-app.yml/badge.svg)](https://github.com/Stasvdovin/Translator/actions/workflows/python-app.yml)
 # Создание приложения для перевода текста с русского на англиский языки
 Задание по дисциплине Программная инженерия.
 # Описание используемой модели 
