@@ -3,3 +3,4 @@ sentencepiece
 torch
 pytest
 streamlit
+sacremoses
