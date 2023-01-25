@@ -1,7 +1,10 @@
 import streamlit as st
 from transformers import pipeline
 # Создаем модель для перевода текста
-translator = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
+@st.cache(allow_output_mutation=True)
+def load_model():
+    translator = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
+    return translator
 # Формируем заголовок для браузера
 st.title("Приложения для перевода текста с русского на англиский язык")
 # Строчка для ввода текста 
