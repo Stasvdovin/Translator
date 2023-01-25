@@ -3,8 +3,9 @@ from transformers import pipeline
 # Создаем модель для перевода текста
 @st.cache(allow_output_mutation=True)
 def load_model():
-    translator = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
-    return translator
+    model = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
+    return model
+translator = model
 # Формируем заголовок для браузера
 st.title("Приложения для перевода текста с русского на англиский язык")
 # Строчка для ввода текста 
