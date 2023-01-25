@@ -10,4 +10,4 @@ name = st.text_area("Введите текст на русском языке ",
 def text_perevod(name):
     return translator(name)
 # Строчка для вывода Перевода 
-st.text_area('Перевод на английском языке', value = text_perevod(name), disabled = False)
+st.button('Отправить', value = text_perevod(name), disabled = False)
