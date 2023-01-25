@@ -9,7 +9,7 @@ name = st.text_input("Введите текст на русском языке "
 # Сделаем функцию для перевода текста
 def text_perevod(name):
     return translator(name)
-# Строчка для вывода Перевода 
+# Кнопка отправки ответа и вывода результата
 if (st.button('Отправить')):
     result = text_perevod(name)
     st.success(result)
