@@ -5,9 +5,11 @@ translator = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
 # Формируем заголовок для браузера
 st.title("Приложения для перевода текста с русского на англиский язык")
 # Строчка для ввода текста 
-name = st.text_area("Введите текст на русском языке ", value ="")
+name = st.text_input("Введите текст на русском языке ", value ="")
 # Сделаем функцию для перевода текста
 def text_perevod(name):
     return translator(name)
 # Строчка для вывода Перевода 
-st.button('Отправить', value = text_perevod(name), disabled = False)
+if (st.button('Отправить')):
+    result = text_perevod(name)
+    st.success(result)
