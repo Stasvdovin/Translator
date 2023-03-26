@@ -2,8 +2,7 @@ import streamlit as st
 from transformers import pipeline
 
 
-# Создаем модель для перевода текста
-@st.cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)  # Создаем модель для перевода текста
 def load_model():
     return pipeline(model="Helsinki-NLP/opus-mt-ru-en")
 
@@ -11,18 +10,18 @@ def load_model():
 translator = load_model()
 
 
-# Формируем заголовок для браузера
-st.title("Приложения для перевода текста с русского на англиский язык")
-# Строчка для ввода текста 
-name = st.text_input("Введите текст на русском языке ", value ="")
-# Сделаем функцию для перевода текста
+st.title(
+    "Приложения для перевода текста с русского на англиский язык"
+)  # Формируем заголовок для браузера
+name = st.text_input(
+    "Введите текст на русском языке ", value=""
+)  # Строчка для ввода текста
 
 
-def text_perevod(name):
+def text_perevod(name):  # Сделаем функцию для перевода текста
     return translator(name)
 
 
-# Кнопка отправки ответа и вывода результата
-if (st.button('Отправить')):
+if st.button("Отправить"):  # Кнопка отправки ответа и вывода результата
     result = text_perevod(name)
     st.success(result)
