@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import pipeline
+import functools
 # Создаем модель для перевода текста
 translator = pipeline(model="Helsinki-NLP/opus-mt-ru-en")
 # Формируем заголовок для браузера
