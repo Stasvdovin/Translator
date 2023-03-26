@@ -25,3 +25,4 @@ def text_perevod(name):  # Сделаем функцию для перевода
 if st.button("Отправить"):  # Кнопка отправки ответа и вывода результата
     result = text_perevod(name)
     st.success(result)
+    
