@@ -22,6 +22,9 @@ def text_perevod(enter_text):
 
 
 # Кнопка отправки ответа и вывода результата
-if st.button("Отправить"):
-    result = text_perevod(enter_text)
-    st.success(result)
+def new_func(enter_text, text_perevod):
+    if st.button("Отправить"):
+        result = text_perevod(enter_text)
+        st.success(result)
+
+new_func(enter_text, text_perevod)
