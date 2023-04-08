@@ -27,4 +27,5 @@ def new_func(enter_text, text_perevod):
         result = text_perevod(enter_text)
         st.success(result)
 
+
 new_func(enter_text, text_perevod)
